@@ -1,2 +1,2 @@
 # Dice
-Starter code for the dice class
+This repo contains the starter code for the Dice class for discussion.
