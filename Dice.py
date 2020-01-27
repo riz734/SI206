@@ -16,13 +16,23 @@ class Dice:
     # create the __str__ method
     # it returns "Last roll: value" where value is the last value in the list that tracks the rolls
 
+    def roll(self):
+        value = random.randrange(1, self.sides)
+        self.rolls.append(value)
+        return value
 
     # create the roll method
     # it randomly picks a value from 1 to the number of sides this dice object has
     # it adds that value to the end of the list that tracks all the rolls
     # it returns the value
 
-
+    def print_count_for_num(self, number):
+        count = 0 
+        for i in self.rolls:
+            if i == number:
+                count += 1
+        print(str(number) + "was rolled" + str(count) + "times - where" + str(number) + "is the number and" + str(count) + " is the count")
+    
     # BONUS
     # create the print_count_for_num method
     # it will count how many times the passed number has been rolled and print 
@@ -56,7 +66,7 @@ def main():
 
     # BONUS quiz
     # Print accumulation
-    #six_sided.print_count_for_num(3)
+    six_sided.print_count_for_num(3)
 
 if __name__ == "__main__":
     main()
