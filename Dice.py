@@ -3,12 +3,16 @@ import random
 
 # create the class Dice
 class Dice:
+    def __init__(self, sides = 6):
+        self.sides = sides
+        self.rolls = []
     # create the constructor (__init__) method
     # it takes as input the number sides and if none is specified use 6
     # it sets the dice object's number of sides (instance variable)
     # it sets the list that tracks the rolls to the empty list (instance variable)
 
-
+    def __str__(self):
+        return "Last roll: " + self.rolls[-1]
     # create the __str__ method
     # it returns "Last roll: value" where value is the last value in the list that tracks the rolls
 
