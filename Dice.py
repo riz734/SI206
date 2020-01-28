@@ -12,12 +12,12 @@ class Dice:
     # it sets the list that tracks the rolls to the empty list (instance variable)
 
     def __str__(self):
-        return "Last roll: " + self.rolls[-1]
+        return "Last roll: " + str(self.rolls[-1])
     # create the __str__ method
     # it returns "Last roll: value" where value is the last value in the list that tracks the rolls
 
     def roll(self):
-        value = random.randrange(1, self.sides)
+        value = random.randrange(1, self.sides + 1)
         self.rolls.append(value)
         return value
 
@@ -31,7 +31,7 @@ class Dice:
         for i in self.rolls:
             if i == number:
                 count += 1
-        print(str(number) + "was rolled" + str(count) + "times - where" + str(number) + "is the number and" + str(count) + " is the count")
+        print(str(number) + " was rolled " + str(count) + " times - where " + str(number) + " is the number and " + str(count) + " is the count")
     
     # BONUS
     # create the print_count_for_num method
